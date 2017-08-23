@@ -89,7 +89,7 @@
 
         methods: {
             async getUsers() {
-                const response = await axios.get('http://localhost:8000/users');
+                const response = await axios.get('http://localhost:3123/users');
 
                 if (response.data.users.length) {
                     this.users = response.data.users;
