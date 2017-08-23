@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
 import UserRow from '../user-row';
+import './users-table.css';
 
 export default function UsersTable({users}) {
-    return <table>
+    return <table className="users-table">
         <thead>
             <tr>
                 <th>
@@ -16,7 +17,7 @@ export default function UsersTable({users}) {
         </thead>
         <tbody>
             {users.map(item => {
-                return <UserRow key={item._id} />;
+                return <UserRow key={item._id} user={item} />;
             })}
         </tbody>
     </table>

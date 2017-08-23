@@ -5,7 +5,6 @@ export default function UserRow({user}) {
     const isActiveImg = user.isActive ?
         'img1' : 'img2';
 
-
     return <tr>
         <td>
             <input type="checkbox" name="" id=""/>
@@ -23,4 +22,5 @@ export default function UserRow({user}) {
             <img src={isActiveImg} alt="" />
         </td>
     </tr>;
+
 }

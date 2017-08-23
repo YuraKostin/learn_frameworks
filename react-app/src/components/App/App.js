@@ -19,10 +19,11 @@ class App extends Component {
     }
 
     getUsers() {
+        const that = this;
         (async function () {
             const response = await axios.get('http://localhost:3123/users');
 
-            this.setState((props) => {
+            that.setState((props) => {
                 return Object.assign({}, props, {
                     users: response.data.users
                 });
@@ -37,7 +38,9 @@ class App extends Component {
                     <img src={logo} className="App-logo" alt="logo"/>
                     <h2>Welcome to React</h2>
                 </div>
-                <UsersTable users={this.state.users}/>
+                <div className="table-container">
+                    <UsersTable users={this.state.users}/>
+                </div>
             </div>
         );
     }
