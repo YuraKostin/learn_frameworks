@@ -1,0 +1,20 @@
+.paginator {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.paginator__item {
+    border: 2px solid #555aaa;
+    padding: 5px;
+    margin: 0 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.paginator__item:hover,
+.paginator__item_active {
+    background: #555aaa;
+    color: #fff;
+}
